@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+    background-color: #181719;
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    grid-gap: 10px;
+}
+
+.container--item {
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* * Header section */
+.desktop--nav {
+    display: none;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.mobile--nav {
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #181719;
+    z-index: 2;
+}
+
+.nav--list {
+    list-style: none;
+}
+
+.nav--link {
+    padding: 10px 0;
+}
+
+.nav--link a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav--link a:hover {
+    border-bottom: 2px solid white;
+    transition: all 1s;
+}
+
+.fas {
+    font-size: 25px;
+    padding: 0 10px;
+}
+
+.nav--btn {
+    color: white;
+    z-index: 2;
+}
+
+.fa-times {
+    color: white;
+}
+
+.logo {
+    font-size: 15px;
+    border: 1px solid white;
+    padding: 5px 10px;
+    font-weight: 400;
+}
+
+/* * Main section */
+
+.main--content {
+    padding: 10px;
+}
+
+.info--container .heading {
+    font-family: "Lora", serif;
+    font-weight: 100;
+    padding: 20px 0;
+    flex: 1;
+}
+
+.info--container .content {
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+.info--container .link {
+    padding: 10px 0;
+    font-size: 0.8rem;
+}
+
+.link a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+.fa-arrow-right {
+    padding: 0 10px;
+}
+
+.design--container {
+    position: relative;
+    height: auto;
+    flex: 2;
+}
+
+.design--image {
+    width: 100%;
+    object-fit: contain;
+}
+
+.designer--card {
+    padding: 10px 10px;
+    position: absolute;
+    width: auto;
+    margin: 0 15px;
+    bottom: -80px;
+    background-color: #181719;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 0.25);
+}
+
+.designer--about {
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+    padding: 20px 10px;
+    flex-wrap: wrap;
+}
+
+.designer--image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.designer--info {
+    padding-left: 10px;
+}
+
+.designer--title {
+    color: #828282;
+}
+
+.design--status {
+    padding: 0px 20px;
+}
+
+@media (min-width: 720px) {
+    .mobile--nav,
+    .nav--btn {
+        display: none;
+    }
+
+    .desktop--nav {
+        display: block;
+    }
+
+    .nav--list {
+        flex: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav--link {
+        padding: 0 20px;
+    }
+
+    .main--content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info--container,
+    .design--container {
+        width: 50%;
+    }
+
+    .designer--card {
+        width: auto;
+        left: 30px;
+        font-size: 1.5rem;
+    }
+
+    .designer--info {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1080px) {
+    .mobile--nav,
+    .nav--btn {
+        display: none;
+    }
+
+    .desktop--nav {
+        display: block;
+    }
+
+    .nav--list {
+        flex: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav--link {
+        padding: 0 20px;
+    }
+
+    .main--content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .info--container,
+    .design--container {
+        width: 50%;
+        height: 70;
+    }
+
+    .designer--card {
+        width: auto;
+        left: 30%;
+        font-size: 0.8rem;
+    }
+
+    .designer--info {
+        font-size: 0.8rem;
+    }
+
+    .content {
+        max-width: 400px;
+    }
+}
